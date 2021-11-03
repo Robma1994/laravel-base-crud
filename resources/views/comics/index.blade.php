@@ -8,6 +8,11 @@
             <p>{{$comic['series']}}</p>
             <a href="{{ route('comics.show', $comic['id']) }}">Details</a>
             <a href="{{ route('comics.edit', $comic['id']) }}">Modify</a>
+            <form method="POST" action="{{ route('comics.destroy', $comic['id']) }}">
+                @csrf
+                @method('DELETE')
+                <button type="submit">DELETE</button>
+            </form>
         @endforeach
     </div>
 @endsection
