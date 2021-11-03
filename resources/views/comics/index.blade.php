@@ -7,6 +7,7 @@
             <img src="{{$comic['thumb']}}" alt="">
             <p>{{$comic['series']}}</p>
             <a href="{{ route('comics.show', $comic['id']) }}">Details</a>
+            <a href="{{ route('comics.edit', $comic['id']) }}">Modify</a>
         @endforeach
     </div>
 @endsection
